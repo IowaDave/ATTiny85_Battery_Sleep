@@ -30,7 +30,7 @@ Using an Uno as the ISP programmer, connect the following:
 |5V|Power|VCC|
 |GND|Ground|GND|
 ### Procedure
-**Configure the Arduino IDE**
+#### Configure the Arduino IDE
 The IDE does not come with a set of core code built-in for the Tiny AVR chips. Add the neeeded cores by pasting the following URL in the "Additional Boards Manager URLs" field of the Arduino IDE Preferences dialog. Note that the field can contain more than one URL; merely separate the URLs with commas.
 
 [https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json](https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json)
@@ -43,14 +43,14 @@ In the Tools menu, make the following selections:
 * Processor: "ATtiny85"
 * Clock: "Internal 8 MHz"
 
-**Configure the Tiny85**
+#### Configure the Tiny85
 A new Tiny85 comes pre-set to use its internal clock at a frequency of 1 MHz. The chip will feel more "like an Arduino" if you change its clock speed to 8 MHz; this change might even be needed for it to accept firmware uploads from the IDE. The change is easy to make.
 
 Having chosen the "Internal 8 MHz" clock speed in the Tools menu, as listed above, run the Tools > Burn Bootloader command. There is no actual bootloader code for a Tiny chip. Instead, this command simply writes certain values to the fuses. It won't hurt your Tiny. After this change, the Tiny85's clock will run at 8 MHz.
 
 You only need to configure the Tiny this way once.
 
-**Upload the Code**
+#### Upload the Code
 The code for this project is provided in this repository as an Arduino-style folder named XYZZY. My respect for readers assumes they already know how to bring it into the IDE.
 
 The IDE actually treats the ArduinoISP as if it were an FTDI programmer for code uploads into a Tiny85. Which makes it possible to use the regular upload method. Just click the right-pointing arrow, press Ctrl-U, or run the Tools > Upload command.
