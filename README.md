@@ -16,7 +16,9 @@ This project demonstrates the deepest sleep level, "power down sleep", combined 
 
 ## Programming the ATtiny85
 ### Connections
-Refer to the 8-pin PDIP package in the following diagram.
+Refer to the 8-pin PDIP package in the following diagram, extracted from the ATtiny25/45/85 data sheet.
+
+![ATtiny25/45/85 Package Diagram](https://github.com/IowaDave/ATTiny85_Battery_Sleep/blob/main/Tiny85_Package_Diagram.pdf)
 
 Using an Uno as the ISP programmer, connect the following:
 |UNO pin|ISP Function|Tiny85 pin|
