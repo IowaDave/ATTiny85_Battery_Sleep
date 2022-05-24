@@ -65,7 +65,7 @@ Finally, attach the batteries:
 * Positive 3-volts to the VCC pin of the Tiny85
 * Negative to the common ground bus.
 
-If all goes well, the LED will blink at approximately one-second intervals. it is interesting to note, regarding the voltage data below, that the LED would have been "on" and consuming current approximately half of the time.
+If all goes well, the LED will blink at approximately one-second intervals. It is interesting to note, regarding the voltage data below, that the LED would have been "on" and consuming current approximately half of the time.
 
 ## Results
 Voltage of the batteries was measured at intervals of elapsed hours:
@@ -100,7 +100,7 @@ Voltage of the batteries was measured at intervals of elapsed hours:
 I stopped taking measurements after 365 hours. Two weeks is 336 hours, which means the apparatus ran continuously for more than 2 weeks. Two observations can be made:
 
 1. Voltage decay had fallen to a rate below 0.0005 volt/hour, compared to a rate of more than 0.002 volt/hour during the second 24-hour period. I believe much this slowing may be due to reduction in current flow through the LED as the voltage decreased. Battery life in hours also increases somewhat as current draw decreases. 
-2. According to the Tiny85 datasheet, safe operation at 8 MHz can be maintained down to 2.40 volts. I can only conjecture that, with 2.664 - 2.400 = 0.264 volts remaining, holding the rate of decrease to a constant 0.0005 volt/hour, the apparatus might have continued to run a further 0.264/0.0005 = 528 hours more or less. 
+2. Familiar AVRs such as the ATmega328P of the Uno have a "safe" minimum voltage threshhold of 2.7 volts. However, according to the datasheet, safe operation of an ATtiny85 at 8 MHz can be maintained down to 2.40 volts. I conjecture that, having 2.664 - 2.400 = 0.264 volts remaining, holding the rate of decrease to a constant 0.0005 volt/hour, the apparatus might have continued to run a further 0.264/0.0005 = 528 hours more or less. Alas, I did not follow it that far.
 
 I have no doubt that the LED accounts for nearly all of the current consumed during the time described above. The Tiny85 would have taken very little. How much?
 
