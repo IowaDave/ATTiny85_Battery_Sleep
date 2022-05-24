@@ -8,7 +8,7 @@ This project demonstrates the deepest sleep level, "power down sleep", combined 
 ## Equipment List
 * ATtiny85 microcontroller
 * Breadboard
-* LED and 330-ohm resistor
+* LED and 220-ohm resistor
 * 2 AAA batteries
 * Battery case for the batteries
 * ISP programmer, e.g., an [Arduino as ISP](https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP)
