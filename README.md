@@ -69,7 +69,9 @@ If all goes well, the LED will blink at approximately one-second intervals. it i
 
 ## Results
 Voltage of the batteries was measured at intervals of elapsed hours:
+
 |Hours|Voltage|
+|---|---|
 |Fresh|3.192|
 | 12|3.046|
 | 24|2.986|
@@ -88,10 +90,10 @@ Voltage of the batteries was measured at intervals of elapsed hours:
 |204|2.776|
 |213|2.768|
 |226|2.756|
-|Skip a day||
+|Skip a day|
 |272|2.716|
 |284|2.702|
-|2.7 volts! See comment below||
+|2.7 volts! See comment below|
 |319|2.684|
 |365|2.664|
 
@@ -104,9 +106,11 @@ I have no doubt that the LED accounts for nearly all of the current consumed dur
 
 According to the Electrical Characteristics table in the data sheet, a Tiny draws 10 uA of current in power-down sleep mode while the Watchdog Timer is running. By contrast, it can pull up to 8 mA while active. What proportion of the time is spent sleeping, and how much awake?
 
-A study of the Assembly code listing produced during compilation by the Arduino IDE shows a total of just a few dozen instructions in the ISR and the loop() process. Most AVR instructions execute in one clock cycle. To be generous, imagine 100 clock cycles of activity during each second. 100/8,000,000 = 0.0000125 second of active time per second. We have:
-  0.0000125 x 8000 uA = 0.1 uA active
-+ 0.9999875 x 10 uA = 9.999875 uA sleeping
-= 10.099875 uA 
+A study of the Assembly code listing produced during compilation by the Arduino IDE shows a total of just a few dozen instructions in the ISR and the loop() process. Most AVR instructions execute in one clock cycle. To be generous, imagine 100 clock cycles of activity during each second. 100/8,000,000 = 0.0000125 second of active time per second. We have:<br>
+<pre>
+        0.0000125 x 8000 uA = 0.100000 uA active
+      + 0.9999875 x 10 uA   = 9.999875 uA sleeping
+                             ---------
+  Total:                     10.099875 uA </pre>
 
-How to interpret an average current of 10.1 uA? A steady average rate of 10 microAmps seems very small compared to the 2,000 milliAmpHour capacity of the two batteries when fresh. I don't feel confident estimating a battery life based on just those two numbers. I do feel safe to say that it would last a great deal longer than two weeks.
+How to interpret an average current of 10.1 uA? A steady average rate of 10 microAmps seems very small compared to the 1,000 milliAmpHour ( 1,000,000 microAmpHours?) of the two batteries when fresh. I don't feel confident estimating a battery life based on just those two numbers. I do feel safe to say that it would extend a great deal longer than two weeks.
