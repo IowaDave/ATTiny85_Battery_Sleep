@@ -39,6 +39,7 @@ Then, in the Boards Manager dialog, scroll down to "attiny by David A. Mellis" a
 
 In the Tools menu, make the following selections:
 * Programmer: "Arduino as ISP" *Note: choose the programmer you actually are using*
+* Port: *The port used by your programmer*
 * Board: ATtiny Microcontrollers > "ATtiny25/45/85"
 * Processor: "ATtiny85"
 * Clock: "Internal 8 MHz"
