@@ -51,7 +51,7 @@ Having chosen the "Internal 8 MHz" clock speed in the Tools menu, as listed abov
 You only need to configure the Tiny this way once.
 
 #### Upload the Code
-The code for this project is provided in this repository as an Arduino-style folder named XYZZY. My respect for readers assumes they already know how to bring it into the IDE.
+The code for this project is provided in this repository as an Arduino-style folder named "ATtiny85_PowerDown_Watchdog". My respect for readers assumes they already know how to bring it into the IDE.
 
 The IDE actually treats the ArduinoISP as if it were an FTDI programmer for code uploads into a Tiny85. Which makes it possible to use the regular upload method. Just click the right-pointing arrow, press Ctrl-U, or run the Tools > Upload command.
 
