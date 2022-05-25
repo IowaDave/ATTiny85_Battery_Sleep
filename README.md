@@ -15,7 +15,7 @@ The boards surround their central microcontroller with other hardware. For examp
 
 All of those additional devices consume current. Moreover, most newcomers stop short of taking full advantage of power-saving features available in the ATmega chip, such as its various "sleep" modes. Usually, people just let everything run full-bore all the time. 
 
-**A Solution in Two Parts**:
+**A Solution in Two Parts**:<br>
 Part 1 is to separate the microcontroller from the Arduino development board and run the controller by itself. Presto! all those power-devouring peripherals are gone. In this project I demonstrate using an ATtiny85 controller, a smaller cousin of the ATmega328P.
 
 Part 2 involves minimizing power consumption of the controller itself. How long can two AAA batteries keep a microcontroller running? The answer is: a surprisingly long time.
