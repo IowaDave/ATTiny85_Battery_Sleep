@@ -13,16 +13,16 @@ The boards surround their central microcontroller with other hardware. For examp
 * a voltage regulator,
 * and several LEDs, including one that burns continuously.
 
-All of those additional devices consume current. Moreover, most newcomers stop short of taking full advantage of power-saving features available in the ATmega chip, such as its various "sleep" modes. Usually, people just let everything run full-bore all the time. 
+All of those additional devices consume current. According to data I found online, the voltage regulator alone continuously consumes 10 milliAmps. Newcomers might also not take advantage of power-saving features available in the ATmega chip, such as its various "sleep" modes. What happens when people just let everything run full-bore all the time? An Arduino Uno drinks about 42 milliAmps of current just sitting there, doing nothing. Add some sensors, servos or LEDs and it gets worse. At that rate, a trio of AA batteries might last only a few days.
 
 **A Solution in Two Parts**:<br>
 Part 1 is to separate the microcontroller from the Arduino development board and run the controller by itself. Presto! all those power-devouring peripherals are gone. In this project I demonstrate using an ATtiny85 controller, a smaller cousin of the ATmega328P.
 
-Part 2 involves minimizing power consumption of the controller itself. How long can two AAA batteries keep a microcontroller running? The answer is: a surprisingly long time.
+Part 2 involves minimizing power consumption of the controller itself. How long can a mere pair of AAA batteries keep a microcontroller running? The answer is: a surprisingly long time.
 
-This project demonstrates the deepest sleep level, "power down" sleep, combined with using the Watchdog Timer Interrupt to wake the chip at approximately one-second intervals. An LED is toggled at each interrupt to visualize the operation. The controller uses about 1/800th of the power while sleeping, compared to the amount it uses while active. Even better, in this demonstration it sleeps more than 99.99 percent of the time.
+This project demonstrates the deepest sleep level, "power down" sleep, combined with using the Watchdog Timer Interrupt to wake the chip at approximately one-second intervals. A single LED is toggled at each interrupt to visualize the operation. The controller uses about 1/800th of the power while sleeping, compared to the amount it uses while active. Even better, in this demonstration it sleeps more than 99.99 percent of the time.
 
-The average power consumption of the chip was reduced to 10.1 *micro*Amps. The LED drew about 9 *milli*Amps when it was "on", more than 891 times more power than the chip used, and the LED was active 50% of the time. Even so, a single pair of AAA batteries kept the demonstration running more than 2 weeks, with ample power to spare when I unplugged the batteries.
+The average power consumption of the chip was reduced to 10.1 *micro*Amps. The LED drew about 9 *milli*Amps when it was "on", which is 9,000 *micro*Amps, equal to more than 891 times greater power drain compared to what the chip used. Not to mention that the LED was actively slurping juice fully half of the time. Even so, a single pair of AAA batteries kept the demonstration running more than 2 weeks, with ample power to spare when I unplugged the batteries.
 
 ## Equipment List
 * ATtiny85 microcontroller
